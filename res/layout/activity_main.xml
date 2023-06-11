@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Electricity Bill Estimation"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="32dp" />
+
+        <TextView
+            android:id="@+id/unitsLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Number of Electricity Units (kWh)"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/unitsEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/rebateLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rebate Percentage (0% - 5%)"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/rebateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:textAllCaps="true"
+            android:layout_marginTop="24dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/totalChargesLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Charges"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="32dp" />
+
+        <TextView
+            android:id="@+id/totalChargesTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RM 0.00"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/finalCostLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Final Cost"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/finalCostTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RM 0.00"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="55dp"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/profileButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#FFFFFF"
+            android:contentDescription="Profile Button"
+            android:src="@drawable/ic_profile_icon" />
+
+        <!-- Add your profile navigation items here -->
+
+    </LinearLayout>
+
+</LinearLayout>
