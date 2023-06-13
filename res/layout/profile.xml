@@ -46,6 +46,21 @@
             android:textSize="18sp"
             android:textColor="@android:color/black"
             android:layout_marginBottom="8dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Class: RCS2405A"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="8dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Matric No : 2022940553"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="8dp" />
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -57,13 +72,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="www.example.com"
+            android:text="https://github.com/syariz0412/Calculator-Assignment"
             android:textSize="18sp"
             android:textColor="@color/link_color"
             android:autoLink="web"
             android:clickable="true"
             android:onClick="openWebsite"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="16dp"
+            android:gravity="center" />
 
     </LinearLayout>
 

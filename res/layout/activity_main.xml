@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Electricity Bill Estimation"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginBottom="32dp" />
 
@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Number of Electricity Units (kWh)"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/unitsEditText"
@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Rebate Percentage (0% - 5%)"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:layout_marginTop="16dp" />
 
         <EditText
@@ -47,21 +47,42 @@
             android:layout_height="wrap_content"
             android:inputType="numberDecimal" />
 
-        <Button
-            android:id="@+id/calculateButton"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Calculate"
-            android:textAllCaps="true"
-            android:layout_marginTop="24dp"
-            android:textSize="16sp" />
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/calculateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calculate"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp" />
+
+            <Button
+                android:id="@+id/clearButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp" />
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/totalChargesLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Total Charges"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginTop="32dp" />
 
@@ -70,14 +91,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="RM 0.00"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/finalCostLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Final Cost"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginTop="16dp" />
 
@@ -86,7 +107,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="RM 0.00"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/instructionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Instructions"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -105,8 +145,6 @@
             android:background="#FFFFFF"
             android:contentDescription="Profile Button"
             android:src="@drawable/ic_profile_icon" />
-
-        <!-- Add your profile navigation items here -->
 
     </LinearLayout>
 

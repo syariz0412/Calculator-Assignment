@@ -17,9 +17,11 @@ public class MainActivity extends AppCompatActivity {
     private EditText unitsEditText;
     private EditText rebateEditText;
     private Button calculateButton;
+    private Button clearButton;
     private TextView totalChargesTextView;
     private TextView finalCostTextView;
     private AppCompatImageButton profileButton;
+    private Button instructionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +31,11 @@ public class MainActivity extends AppCompatActivity {
         unitsEditText = findViewById(R.id.unitsEditText);
         rebateEditText = findViewById(R.id.rebateEditText);
         calculateButton = findViewById(R.id.calculateButton);
+        clearButton = findViewById(R.id.clearButton);
         totalChargesTextView = findViewById(R.id.totalChargesTextView);
         finalCostTextView = findViewById(R.id.finalCostTextView);
         profileButton = findViewById(R.id.profileButton);
+        instructionButton = findViewById(R.id.instructionButton);
 
         calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,10 +44,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        clearButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clearFields();
+            }
+        });
+
         profileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openProfileView();
+            }
+        });
+
+        instructionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openInstructionView();
             }
         });
     }
@@ -83,9 +101,22 @@ public class MainActivity extends AppCompatActivity {
         finalCostTextView.setText(String.format("RM %.2f", finalCost));
     }
 
+    private void clearFields() {
+        unitsEditText.setText("");
+        rebateEditText.setText("");
+        totalChargesTextView.setText("RM 0.00");
+        finalCostTextView.setText("RM 0.00");
+    }
+
     private void openProfileView() {
         // Inflate profile.xml layout and set it as the content view
         View profileView = LayoutInflater.from(this).inflate(R.layout.profile, (ViewGroup) findViewById(android.R.id.content), false);
         setContentView(profileView);
+    }
+
+    private void openInstructionView() {
+        // Inflate instruction.xml layout and set it as the content view
+        View instructionView = LayoutInflater.from(this).inflate(R.layout.instruction, (ViewGroup) findViewById(android.R.id.content), false);
+        setContentView(instructionView);
     }
 }
